@@ -10,5 +10,6 @@
   &__content {
     opacity: .15;
     object-fit: cover; // work as background-size property
+    height: 100%;
   }
 }

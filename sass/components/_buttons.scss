@@ -1,16 +1,21 @@
 .btn {
+  &,
   &:link,
   &:visited {
+    display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    display: inline-block;
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
     font-size: 1.6rem;
+
+    //changes for <button> element
     border: none;
-    cursor: pointer; }
+    cursor: pointer;
+
+  }
 
   &:hover {
     transform: translateY(-3px);
@@ -30,7 +35,7 @@
 
   &--white {
     background-color: $color-white;
-    color: $color-grey-dark;
+    color: $color-grey-dark-1;
 
     &::after {
       background-color: $color-white; }
