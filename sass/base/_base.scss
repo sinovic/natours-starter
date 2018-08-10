@@ -25,5 +25,9 @@ html {
 
 body {
   box-sizing: border-box;
-  margin: 3rem;
+  padding: 3rem;
+
+  @include breakpoint(small) {
+    padding: 0;
+  }
 }
