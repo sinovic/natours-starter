@@ -7,9 +7,21 @@
   border-radius: 3px;
   transform: skewX(-12deg);
 
+  @include breakpoint(small) {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  @include breakpoint(x-small) {
+    transform: skewX(0);
+  }
 
   & > * {
     transform: skewX(12deg);
+
+    @include breakpoint(x-small) {
+      transform: skewX(0);
+    }
   }
 
   &__shape {
@@ -19,6 +31,10 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     margin-right: 3rem;
+
+    @include breakpoint(x-small) {
+
+    }
   }
 
   &__img {
