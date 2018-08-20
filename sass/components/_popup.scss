@@ -13,8 +13,8 @@
 
   &__box {
     @include center-vh;
-    width: 75%;
-    height: 50rem;
+    width: 90%;
+    //height: 50rem;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     border-radius: 3px;
@@ -22,26 +22,50 @@
     overflow: hidden;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
+    @include breakpoint(small) {
+      width: 95%;
+    }
   }
 
   &__left,
   &__right {
     display: table-cell;
+
+    @include breakpoint(small) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__left {
     width: 33.333333%;
+
+    @include breakpoint(small) {
+      width: 100%;
+    }
   }
 
   &__right {
     width: 66.6666667%;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include breakpoint(small) {
+      width: 100%;
+    }
   }
 
   &__img {
     width: 100%;
     display: block;
+
+    @include breakpoint(small) {
+      display: inline-block;
+      width: 49.5%;
+    }
+
+
 
   }
 
@@ -54,6 +78,10 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
+    @include breakpoint(x-small) {
+      column-count: 1;
+    }
   }
 
   &:target {
