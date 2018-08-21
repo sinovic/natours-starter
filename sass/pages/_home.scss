@@ -20,6 +20,15 @@
   background-size: cover;
   transform: skewY(-7deg);
 
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (min-width: 87.5em) {
+    background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-secondary-light, .8),
+                    rgba($color-secondary-dark, .8)),
+    url(../img/nat-4.jpg);
+  }
+
   & > * {
     transform: skewY(7deg);
   }
