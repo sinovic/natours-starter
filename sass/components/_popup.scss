@@ -11,6 +11,12 @@
   visibility: hidden;
   transition: all .4s;
 
+  // Graceful degradation
+  @supports (-webkit-backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+  }
+
   &__box {
     @include center-vh;
     width: 90%;

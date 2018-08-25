@@ -113,7 +113,10 @@
 
 
 
-  @include breakpoint(small) {
+  // @include breakpoint(small) {
+  @media only screen and (max-width: 56.25em),
+         only screen and (hover: none) { //Touch screens
+
     border-radius: 3px;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
